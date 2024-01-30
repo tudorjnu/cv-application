@@ -1,7 +1,15 @@
-import './section-wrapper.module.scss'
+import style from './section-wrapper.module.scss';
 
-export default function SectionWrapper() {
+export default function SectionWrapper({
+  sectionTitle = "My Section Title",
+  children,
+}) {
+
   return (
-    <div></div>
-  )
+    <div className={style.sectionWrapper} >
+      <h3>{sectionTitle}</h3>
+      <hr />
+      {children}
+    </div>
+  );
 }
