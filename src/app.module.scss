@@ -1,0 +1,13 @@
+@import './styles/index.scss';
+
+body {
+  height: 100vh;
+  background-color: $neutral-200;
+  padding: $unit-4;
+}
+
+.site-container {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: $unit-8;
+}
