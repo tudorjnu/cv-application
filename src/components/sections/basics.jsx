@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Link } from "../buttons/buttons"
+import { useState } from "react"
 
 const style = {
   display: "flex",
@@ -11,10 +12,14 @@ const style = {
 
 
 export default function BasicsSection({ name, label, image, email, phone, url, summary, location, profiles }) {
+  const [editableName, setEditableName] = useState("Full Name")
+
+  const handleNameChange = (e) => setEditableName(e.target.innerText)
+  console.log(editableName)
 
   return (
     <>
-      <h1>{name}</h1>
+      <h1 contentEditable="true" onBlur={handleNameChange}>{editableName}</h1>
       <h2>{label}</h2>
       <ul style={style}>
         <li><Link icon="phone" href={`tel:${phone}`} content={phone} /></li>
