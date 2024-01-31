@@ -1,10 +1,5 @@
 import SectionWrapper from "../layout/section-wrapper"
 
-const ex = {
-  language: "English",
-  fluency: "Native speaker"
-}
-
 function LanguagesItem({ language, fluency }) {
   return (
 

@@ -1,17 +1,5 @@
 import SectionWrapper from "../layout/section-wrapper"
 
-const ex = {
-
-  name: "Web Development",
-  level: "Master",
-  keywords: [
-    "HTML",
-    "CSS",
-    "JavaScript"
-  ]
-}
-
-
 function SkillsItem({ name, level, keywords }) {
   return (
 

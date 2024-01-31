@@ -1,13 +1,5 @@
 import SectionWrapper from "../layout/section-wrapper"
 
-const ex = {
-  name: "Wildlife",
-  keywords: [
-    "Ferrets",
-    "Unicorns"
-  ]
-}
-
 function InterestsItem({ name, keywords }) {
   return (
     <div>

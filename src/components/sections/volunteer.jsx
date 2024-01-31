@@ -1,17 +1,5 @@
 import SectionWrapper from "../layout/section-wrapper"
 
-const ex = {
-  organization: "Organization",
-  position: "Volunteer",
-  url: "https://organization.com/",
-  startDate: "2012-01-01",
-  endDate: "2013-01-01",
-  summary: "Description…",
-  highlights: [
-    "Awarded 'Volunteer of the Month'"
-  ]
-}
-
 function VolunteerItem({ organization, position, url, startDate, endDate, summary, highlights }) {
   return (
     < div >

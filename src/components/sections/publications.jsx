@@ -1,12 +1,5 @@
 import SectionWrapper from "../layout/section-wrapper"
 
-const ex = {
-  name: "Publication",
-  publisher: "Company",
-  releaseDate: "2014-10-01",
-  url: "https://publication.com",
-  summary: "Description…"
-}
 
 function PublicationItem({ name, publisher, releaseDate, url, summary }) {
   return (

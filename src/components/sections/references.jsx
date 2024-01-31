@@ -1,10 +1,5 @@
 import SectionWrapper from "../layout/section-wrapper"
 
-const ex = {
-  name: "Jane Doe",
-  reference: "Reference…"
-}
-
 function ReferencesItem({ name, reference }) {
   return (
     <div>
