@@ -7,9 +7,7 @@ function SkillsItem({ name, level, keywords }) {
       <h4>{name}</h4>
       <span>{level}</span>
       <ul>
-        <li>{keywords[0]}</li>
-        <li>{keywords[1]}</li>
-        <li>{keywords[2]}</li>
+        {keywords.map((keyword, index) => <li key={index}>{keyword}</li>)}
       </ul>
     </div>
   )

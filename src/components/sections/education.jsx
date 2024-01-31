@@ -13,8 +13,7 @@ function EducationItem({ institution, url, area, studyType, startDate, endDate, 
       </div>
       <a href={url}>{url}</a>
       <ul>
-        <li>{courses[0]}</li>
-        <li>{courses[0]}</li>
+        {courses.map((course, index) => <li key={index}>{course}</li>)}
       </ul>
     </div>
   )

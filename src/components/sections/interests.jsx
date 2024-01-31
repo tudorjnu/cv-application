@@ -5,8 +5,7 @@ function InterestsItem({ name, keywords }) {
     <div>
       <h4>{name}</h4>
       <ul>
-        <li>{keywords[0]}</li>
-        <li>{keywords[1]}</li>
+        {keywords.map((keyword, index) => <li key={index}>{keyword}</li>)}
       </ul>
     </div>
 

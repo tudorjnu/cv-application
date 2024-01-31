@@ -14,7 +14,7 @@ function WorkItem({ name, position, url, startDate, endDate, summary, highlights
       <a href={url}>{url}</a>
       <p>{summary}</p>
       <ul>
-        <li>{highlights[0]}</li>
+        {highlights.map((highlight, index) => <li key={index}>{highlight}</li>)}
       </ul>
     </div>
 

@@ -10,7 +10,7 @@ function ProjectItem({ name, startDate, endDate, description, highlights, url })
       <a href={url}>{url}</a>
       <p>{description}</p>
       <ul>
-        <li>{highlights[0]}</li>
+        {highlights.map((highlight, index) => <li key={index}>{highlight}</li>)}
       </ul>
     </div>
   )

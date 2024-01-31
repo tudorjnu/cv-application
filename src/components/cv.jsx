@@ -1,10 +1,8 @@
 /* eslint-disable react/prop-types */
 import style from './cv.module.scss';
-import PropTypes from 'prop-types'
 
 import BasicsSection from './sections/basics';
 import EducationSection from './sections/education';
-import SectionWrapper from './layout/section-wrapper'
 import WorkSection from './sections/work';
 import VolunteerSection from './sections/volunteer';
 import AwardsSection from './sections/awards';
