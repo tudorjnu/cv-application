@@ -11,7 +11,9 @@ export default function SectionWrapper({
     <div className={style.sectionWrapper} >
       <h3>{sectionTitle}</h3>
       <hr />
-      {sectionList.map((item, index) => < SectionItem key={index} {...item} />)}
+      <div style={{ position: 'relative' }}>
+        {sectionList.map((item, index) => < SectionItem key={index} {...item} />)}
+      </div>
     </div>
   );
 }

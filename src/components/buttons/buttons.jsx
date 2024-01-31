@@ -1,10 +1,9 @@
 /* eslint-disable react/prop-types */
-import parsePhoneNumber from 'libphonenumber-js'
 import style from './buttons.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-export function EditButton({ onClick }) {
-  return <button onClick={onClick}></button>
+export function EditButton() {
+  return <button className={style.editButton}><FontAwesomeIcon icon="edit" /></button>
 }
 
 
