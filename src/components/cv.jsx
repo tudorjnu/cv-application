@@ -1,17 +1,17 @@
 /* eslint-disable react/prop-types */
 import style from './cv.module.scss';
 
-import BasicsSection from './sections/basics';
-import EducationSection from './sections/education';
-import WorkSection from './sections/work';
-import VolunteerSection from './sections/volunteer';
-import AwardsSection from './sections/awards';
-import SkillsSection from './sections/skills';
-import ProjectsSection from './sections/projects';
-import PublicationsSection from './sections/publications';
-import LanguagesSection from './sections/languages';
-import InterestsSection from './sections/interests';
-import ReferencesSection from './sections/references';
+import Basics from './sections/basics';
+import Education from './sections/education';
+import Work from './sections/work';
+import Volunteer from './sections/volunteer';
+import Awards from './sections/awards';
+import Skills from './sections/skills';
+import Projects from './sections/projects';
+import Publications from './sections/publications';
+import Languages from './sections/languages';
+import Interests from './sections/interests';
+import References from './sections/references';
 
 
 export default function Main({
@@ -30,21 +30,23 @@ export default function Main({
 
   return (
     <main className={`container-1 ${style.page}`} style={style}>
-      <BasicsSection {...basics} />
-      <div style={{ gridArea: "left" }}>
-        <EducationSection list={education} />
-        <WorkSection list={work} />
-        <VolunteerSection list={volunteer} />
-        <ProjectsSection list={projects} />
-      </div>
-      <div style={{ gridArea: "right" }}>
-        <AwardsSection list={awards} />
-        <SkillsSection list={skills} />
-        <PublicationsSection list={publications} />
-        <LanguagesSection list={languages} />
-        <InterestsSection list={interests} />
-        <ReferencesSection list={references} />
-      </div>
+      <section style={{ gridArea: "header" }}>
+        <Basics {...basics} />
+      </section>
+      <section style={{ gridArea: "left" }}>
+        <Education list={education} />
+        <Work list={work} />
+        <Volunteer list={volunteer} />
+        <Projects list={projects} />
+      </section>
+      <section style={{ gridArea: "right" }}>
+        <Awards list={awards} />
+        <Skills list={skills} />
+        <Publications list={publications} />
+        <Languages list={languages} />
+        <Interests list={interests} />
+        <References list={references} />
+      </section>
     </main >
   )
 }
