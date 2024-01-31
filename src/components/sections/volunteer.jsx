@@ -12,22 +12,26 @@ const ex = {
   ]
 }
 
-export default function VolunteerSection() {
+function VolunteerItem({ organization, position, url, startDate, endDate, summary, highlights }) {
   return (
-    <SectionWrapper sectionTitle="Experience" >
+    < div >
+      <h4>{position}</h4>
       <div>
-        <h4>{ex.position}</h4>
-        <div>
-          <h5>{ex.organization}</h5>
-          <span>{ex.startDate} - {ex.endDate}</span>
-        </div>
-        <a href={ex.url}>{ex.url}</a>
-        <p>{ex.summary}</p>
-        <ul>
-          <li>{ex.highlights[0]}</li>
-        </ul>
+        <h5>{organization}</h5>
+        <span>{startDate} - {endDate}</span>
       </div>
-    </SectionWrapper>
+      <a href={url}>{url}</a>
+      <p>{summary}</p>
+      <ul>
+        <li>{highlights[0]}</li>
+      </ul>
+    </div >
+  )
+}
+
+export default function VolunteerSection({ list }) {
+  return (
+    <SectionWrapper sectionTitle="Volunteering" sectionList={list} SectionItem={VolunteerItem} />
   )
 
 }

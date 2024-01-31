@@ -1,33 +1,29 @@
+/* eslint-disable react/prop-types */
 import SectionWrapper from "../layout/section-wrapper"
 
-const ex = {
-  name: "Company",
-  position: "President",
-  url: "https://company.com",
-  startDate: "2013-01-01",
-  endDate: "hhl",
-  summary: "Description…",
-  highlights: [
-    "Started the company"
-  ]
+
+function WorkItem({ name, position, url, startDate, endDate, summary, highlights }) {
+
+  return (
+    <div>
+      <h4>{position}</h4>
+      <div>
+        <h5>{name}</h5>
+        <span>{startDate} - {endDate}</span>
+      </div>
+      <a href={url}>{url}</a>
+      <p>{summary}</p>
+      <ul>
+        <li>{highlights[0]}</li>
+      </ul>
+    </div>
+
+  )
 }
 
-export default function WorkSection() {
+export default function WorkSection({ list }) {
   return (
-    <SectionWrapper sectionTitle="Experience" >
-      <div>
-        <h4>{ex.position}</h4>
-        <div>
-          <h5>{ex.name}</h5>
-          <span>{ex.startDate} - {ex.endDate}</span>
-        </div>
-        <a href={ex.url}>{ex.url}</a>
-        <p>{ex.summary}</p>
-        <ul>
-          <li>{ex.highlights[0]}</li>
-        </ul>
-      </div>
-    </SectionWrapper>
+    <SectionWrapper sectionTitle="Experience" sectionList={list} SectionItem={WorkItem} />
   )
 
 }

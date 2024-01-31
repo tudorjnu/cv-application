@@ -5,13 +5,18 @@ const ex = {
   fluency: "Native speaker"
 }
 
-export default function LanguagesSection() {
+function LanguagesItem({ language, fluency }) {
   return (
-    <SectionWrapper sectionTitle="Languages" >
-      <div>
-        <h4>{ex.language}</h4>
-        <span>{ex.fluency}</span>
-      </div>
-    </SectionWrapper>
+
+    <div>
+      <h4>{language}</h4>
+      <span>{fluency}</span>
+    </div>
+  )
+
+}
+export default function LanguagesSection({ list }) {
+  return (
+    <SectionWrapper sectionTitle="Languages" sectionList={list} SectionItem={LanguagesItem} />
   )
 }

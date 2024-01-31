@@ -2,6 +2,8 @@ import style from './section-wrapper.module.scss';
 
 export default function SectionWrapper({
   sectionTitle = "My Section Title",
+  sectionList,
+  SectionItem,
   children,
 }) {
 
@@ -9,7 +11,7 @@ export default function SectionWrapper({
     <div className={style.sectionWrapper} >
       <h3>{sectionTitle}</h3>
       <hr />
-      {children}
+      {sectionList.map((item, index) => < SectionItem key={index} {...item} />)}
     </div>
   );
 }

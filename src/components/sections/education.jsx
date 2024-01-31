@@ -1,38 +1,28 @@
+/* eslint-disable react/prop-types */
 import SectionWrapper from "../layout/section-wrapper"
 
-const ex = {
-  institution: "University",
-  url: "https://institution.com/",
-  area: "Software Development",
-  studyType: "Bachelor",
-  startDate: "2011-01-01",
-  endDate: "2013-01-01",
-  score: "4.0",
-  courses: [
-    "DB1101 - Basic SQL"
-  ]
+
+function EducationItem({ institution, url, area, studyType, startDate, endDate, score, courses }) {
+  return (
+    <div>
+      <h4>{studyType} in {area}</h4>
+      <div>
+        <h5>{institution}</h5>
+        <span>{score}</span>
+        <span>{startDate} - {endDate}</span>
+      </div>
+      <a href={url}>{url}</a>
+      <ul>
+        <li>{courses[0]}</li>
+        <li>{courses[0]}</li>
+      </ul>
+    </div>
+  )
 }
 
-
-export default function EducationSection() {
+export default function EducationSection({ list }) {
 
   return (
-    <SectionWrapper sectionTite="Education" >
-      <div>
-        <h4>{ex.studyType} in {ex.area}</h4>
-        <div>
-          <h5>{ex.organization}</h5>
-          <span>{ex.score}</span>
-          <span>{ex.startDate} - {ex.endDate}</span>
-        </div>
-        <a href={ex.url}>{ex.url}</a>
-        <ul>
-          <li>{ex.courses[0]}</li>
-          <li>{ex.courses[0]}</li>
-        </ul>
-
-
-      </div>
-    </SectionWrapper>
+    <SectionWrapper sectionTitle="Education" sectionList={list} SectionItem={EducationItem} />
   )
 }

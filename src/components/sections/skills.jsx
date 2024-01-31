@@ -9,22 +9,28 @@ const ex = {
     "CSS",
     "JavaScript"
   ]
+}
+
+
+function SkillsItem({ name, level, keywords }) {
+  return (
+
+    <div>
+      <h4>{name}</h4>
+      <span>{level}</span>
+      <ul>
+        <li>{keywords[0]}</li>
+        <li>{keywords[1]}</li>
+        <li>{keywords[2]}</li>
+      </ul>
+    </div>
+  )
 
 }
 
-export default function SkillsSection() {
+export default function SkillsSection({ list }) {
   return (
-    <SectionWrapper sectionTitle="Experience" >
-      <div>
-        <h4>{ex.name}</h4>
-        <span>{ex.level}</span>
-        <ul>
-          <li>{ex.keywords[0]}</li>
-          <li>{ex.keywords[1]}</li>
-          <li>{ex.keywords[2]}</li>
-        </ul>
-      </div>
-    </SectionWrapper>
+    <SectionWrapper sectionTitle="Experience" sectionList={list} SectionItem={SkillsItem} />
   )
 
 }

@@ -8,18 +8,23 @@ const ex = {
   summary: "Description…"
 }
 
-export default function PublicationsSection() {
+function PublicationItem({ name, publisher, releaseDate, url, summary }) {
   return (
-    <SectionWrapper sectionTitle="Publications" >
+    <div>
       <div>
-        <div>
-          <h4>{ex.name}</h4>
-          <h5>{ex.publisher}</h5>
-          <span>{ex.releaseDate}</span>
-        </div>
-        <a href={ex.url}>{ex.url}</a>
-        <p>{ex.summary}</p>
+        <h4>{name}</h4>
+        <h5>{publisher}</h5>
+        <span>{releaseDate}</span>
       </div>
-    </SectionWrapper>
+      <a href={url}>{url}</a>
+      <p>{summary}</p>
+    </div>
+  )
+
+}
+
+export default function PublicationsSection({ list }) {
+  return (
+    <SectionWrapper sectionTitle="Publications" sectionList={list} SectionItem={PublicationItem} />
   )
 }

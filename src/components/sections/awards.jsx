@@ -1,22 +1,19 @@
 import SectionWrapper from "../layout/section-wrapper"
 
-const ex = {
-  title: "Award",
-  date: "2014-11-01",
-  awarder: "Company",
-  summary: "There is no spoon."
-}
-
-export default function AwardsSection() {
+function AwardsItem({ title, date, awarder, summary }) {
   return (
-    <SectionWrapper sectionTitle="Awards" >
-      <div>
-        <h4>{ex.title}</h4>
-        <h5>{ex.awarder}</h5>
-        <span>{ex.date}</span>
-        <p>{ex.summary}</p>
-      </div>
-    </SectionWrapper>
+    <div>
+      <h4>{title}</h4>
+      <h5>{awarder}</h5>
+      <span>{date}</span>
+      <p>{summary}</p>
+    </div>
   )
 
+}
+
+export default function AwardsSection({ list }) {
+  return (
+    <SectionWrapper sectionTitle="Awards" sectionList={list} SectionItem={AwardsItem} />
+  )
 }

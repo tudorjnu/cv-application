@@ -8,16 +8,21 @@ const ex = {
   ]
 }
 
-export default function InterestsSection() {
+function InterestsItem({ name, keywords }) {
   return (
-    <SectionWrapper sectionTitle="Interests" >
-      <div>
-        <h4>{ex.name}</h4>
-        <ul>
-          <li>{ex.keywords[0]}</li>
-          <li>{ex.keywords[1]}</li>
-        </ul>
-      </div>
-    </SectionWrapper>
+    <div>
+      <h4>{name}</h4>
+      <ul>
+        <li>{keywords[0]}</li>
+        <li>{keywords[1]}</li>
+      </ul>
+    </div>
+
+  )
+}
+
+export default function InterestsSection({ list }) {
+  return (
+    <SectionWrapper sectionTitle="Interests" sectionList={list} SectionItem={InterestsItem} />
   )
 }

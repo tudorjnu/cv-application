@@ -5,13 +5,17 @@ const ex = {
   reference: "Reference…"
 }
 
-export default function ReferencesSection() {
+function ReferencesItem({ name, reference }) {
   return (
-    <SectionWrapper sectionTitle="References" >
-      <div>
-        <h4>{ex.name}</h4>
-        <p>{ex.reference}</p>
-      </div>
-    </SectionWrapper>
+    <div>
+      <h4>{name}</h4>
+      <p>{reference}</p>
+    </div>
+  )
+
+}
+export default function ReferencesSection({ list }) {
+  return (
+    <SectionWrapper sectionTitle="References" sectionList={list} SectionItem={ReferencesItem} />
   )
 }
