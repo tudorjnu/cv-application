@@ -6,14 +6,5 @@
 // wrappers
 @import './wrappers.scss';
 
-body {
-  height: 100vh;
-  background-color: $neutral-200;
-  padding: $unit-4;
-}
-
-#root {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: $unit-8;
-}
+// defaults
+@import './default.scss';
