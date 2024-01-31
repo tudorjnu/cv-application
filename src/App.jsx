@@ -1,13 +1,13 @@
-import SideNav from "./components/navigation/side-nav"
-import Main from './components/main/main'
-
+import SideNav from "./components/side-nav"
+import Main from './components/cv'
+import './styles/index.scss'
 
 
 function App() {
 
   return (
     <>
-      <SideNav />
+      < SideNav />
       <Main />
     </>
   )

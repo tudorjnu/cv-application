@@ -1,7 +1,19 @@
-@import './variables.scss', './units.scss', './colors.scss';
+@import './variables.scss';
 
 // base 
 @import './base.scss';
 
 // wrappers
-@import './wrappers.scss'
+@import './wrappers.scss';
+
+body {
+  height: 100vh;
+  background-color: $neutral-200;
+  padding: $unit-4;
+}
+
+#root {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: $unit-8;
+}
