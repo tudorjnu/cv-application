@@ -1,22 +1,14 @@
-import SideNav from "./components/side-nav"
-import Main from './components/cv'
-import './styles/index.scss'
-import resumeData from './resume.json'
-import { useState } from "react"
-import { AddSectionModal } from "./components/modals"
+import SideNav from "./components/side-nav";
+import Resume from "./components/resume.jsx";
+import "./styles/index.scss";
 
 function App() {
-  const [showAddSectionModal, setShowAddSectionModal] = useState(true)
-
-
-
   return (
-    <>
-      <AddSectionModal show={showAddSectionModal} />
+    <div className="app-wrapper">
       <SideNav />
-      <Main {...resumeData} />
-    </>
-  )
+      <Resume />
+    </div>
+  );
 }
 
-export default App
+export default App;
