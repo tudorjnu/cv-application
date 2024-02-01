@@ -1,18 +1,13 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { BasicsForm } from "./basics";
+import { EducationForm } from "./education";
+import { WorkForm } from "./work";
 
-function AddSectionButton() {
+export default function SideNav({ resume, setResume }) {
   return (
-    <button>
-      <FontAwesomeIcon icon="add" />
-      Add Section
-    </button>
-  );
-}
-
-export default function SideNav() {
-  return (
-    <aside className="container-1">
-      <AddSectionButton />
+    <aside className="side-wrapper">
+      <BasicsForm resume={resume} setResume={setResume} />
+      <EducationForm resume={resume} setResume={setResume} />
+      <WorkForm resume={resume} setResume={setResume} />
     </aside>
   );
 }

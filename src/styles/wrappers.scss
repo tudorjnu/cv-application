@@ -8,17 +8,35 @@
     rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
+.side-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: $unit-4;
+}
+
 .resume-wrapper {
   width: 210mm;
   height: 297mm;
   display: flex;
   flex-direction: column;
+  gap: $unit-8;
 }
 
 .app-wrapper {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: auto 1fr;
   gap: $unit-8;
+}
+
+.form-wrapper {
+  background-color: $neutral-100;
+  display: flex;
+  flex-direction: column;
+  padding: $unit-3;
+  border-radius: $unit-2;
+  box-shadow:
+    rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
 /* The Modal (background) */
@@ -36,6 +54,7 @@
 
 /* Modal Content/Box */
 .modal-content {
+  position: relative;
   background-color: #fefefe;
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
@@ -45,13 +64,22 @@
 
 /* The Close Button */
 .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+
   color: $neutral-400;
-  float: right;
-  font-size: $unit-8;
-  font-weight: bold;
-  display: inline-flex;
+  font-size: $unit-6;
+
   border: none;
   background-color: transparent;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: $unit-6;
+  height: $unit-6;
 
   &:focus,
   &:hover {
